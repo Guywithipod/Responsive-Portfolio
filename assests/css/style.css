@@ -209,13 +209,31 @@ input[type=submit] {
   body {
     width: 100%;
   }
-  
+}
+
 @media screen and (max-width: 768px) {
   body {
     width: 100%;
   }
-  
+}
+
 @media screen and (max-width: 640px) {
   body {
     width: 100%;
   }
+  #logo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  #logo {
+    position: relative;
+    width; 100%;
+  }
+  nav {
+    position: relative;
+    top: 10%;
+    text-align: left;
+  }
+}
