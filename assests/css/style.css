@@ -121,6 +121,7 @@ h3, h2 {
 .main-section {
   float: left;
   width: 100%;
+  height: 100%;
   max-width: 960px;
   padding: 30px;
   margin: 0 0 40px;
@@ -208,15 +209,49 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 980px) {
-  body {
-    width: 100%;
+  .main-section {
+    width: 70%;
+    padding-bottom: -40%;
   }
 }
 
+nav {
+  position: relative;
+  top: 10%;
+  text-align: right;
+  margin-right: 60px;
+  margin-top: 25px;
+}
+
+.auth-image {
+  float: left;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+p {
+  clear: hidden;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+#masthead {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+#logo {
+  width: auto;
+  margin-left: 40px;
+}
+
 @media screen and (max-width: 768px) {
-  body {
-    width: 100%;
+  .main-section {
+    width: 95%;
   }
+}
+
 }
 
 @media screen and (max-width: 640px) {
@@ -249,7 +284,6 @@ input[type=submit] {
     width: 100%;
     margin: 0 0 30px;
   }
-
   .container {
     width: 90%;
   }
