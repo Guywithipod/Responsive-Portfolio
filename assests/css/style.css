@@ -241,50 +241,44 @@ body {
   margin-top: -10px;
   margin-left: -10px;
 }
+
 #logo {
-  width: auto;
+  width: 400px;
   margin-left: 40px;
 }
 
 @media screen and (max-width: 768px) {
+  
   .main-section {
     width: 95%;
+  
+    margin-left: 15px;
+    margin-bottom: 600px;
+    margin-top: 50px;
   }
+
+nav {
+  margin-right: 40px;
+  margin-bottom: 15px;
 }
 
-}
 
 @media screen and (max-width: 640px) {
-  body {
-    width: 100%;
-  }
-  #logo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  #logo {
-    position: relative;
-    width;
-    100%;
-  }
-  nav {
-    position: relative;
-    top: 10%;
-    text-align: center;
-    float: none;
-    margin-top: 0px;
-  }
+
   .main-section {
     width: 95%;
+ 
+    margin-left: 15px;
+    margin-bottom: 100px;
+    margin-top: 50px;
   }
-  #masthead {
-    position: fixed;
-    z-index: 99;
+  #logo {
     width: 100%;
-    margin: 0 0 30px;
+    margin-left: auto;
   }
-  .container {
-    width: 90%;
+  nav {
+    width: 100%;
+    text-align: center;
+    margin-right: auto;
   }
 }
