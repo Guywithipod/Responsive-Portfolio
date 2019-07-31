@@ -165,8 +165,8 @@ h3, h2 {
 
 .auth-image {
   float: left;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
   margin-top: 10px;
   margin-right: 25px;
   transform: rotate(90deg);
@@ -212,6 +212,7 @@ input[type=submit] {
   .main-section {
     width: 70%;
     padding-bottom: -40%;
+    margin-bottom: 400px;
   }
 }
 
@@ -248,37 +249,30 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  
   .main-section {
     width: 95%;
-  
     margin-left: 15px;
     margin-bottom: 600px;
     margin-top: 50px;
   }
-
-nav {
-  margin-right: 40px;
-  margin-bottom: 15px;
-}
-
-
-@media screen and (max-width: 640px) {
-
-  .main-section {
-    width: 95%;
- 
-    margin-left: 15px;
-    margin-bottom: 100px;
-    margin-top: 50px;
-  }
-  #logo {
-    width: 100%;
-    margin-left: auto;
-  }
   nav {
-    width: 100%;
-    text-align: center;
-    margin-right: auto;
+    margin-right: 40px;
+    margin-bottom: 15px;
   }
-}
+  @media screen and (max-width: 640px) {
+    .main-section {
+      width: 95%;
+      margin-left: 15px;
+      margin-bottom: 150px;
+      margin-top: 50px;
+    }
+    #logo {
+      width: 100%;
+      margin-left: auto;
+    }
+    nav {
+      width: 100%;
+      text-align: center;
+      margin-right: auto;
+    }
+  }
