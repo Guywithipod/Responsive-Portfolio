@@ -1,4 +1,4 @@
-const buttonsArray = ["lazers", "lights", "bass", "skateboard"];
+const buttonsArray = ["lazers", "lights", "bass", "skateboard","mouse","computer","snakes","rome","cash","nice","glass"];
 
 const submitButton = document.getElementById("submit-button");
 
