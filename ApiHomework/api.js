@@ -1,4 +1,4 @@
-const buttonsArray = ["lazers", "lights", "bass", "skateboard","mouse","computer","snakes","rome","cash","nice","glass"];
+const buttonsArray = ["lazers", "lights", "bass", "skateboard", "mouse", "computer", "snakes", "rome", "cash", "nice", "glass"];
 
 const submitButton = document.getElementById("submit-button");
 
@@ -17,46 +17,56 @@ function showGifs() {
 
         const results = responseJson.data;
 
+        document.getElementById("gifs").innerHTML = '';
+
+        let wrapper;
+
         for (let i = 0; i < results.length; i++) {
+
+           
 
             if (results[i].rating === "r" || results[i].rating === "pg") {
                 console.log(responseJson)
 
+                wrapper = document.createElement('div');
+                wrapper.classList.add('gif-wrapper');
+
                 const gifDiv = document.createElement("div");
-
                 const rating = results[i].rating;
-
                 const p = document.createElement("p");
+
                 p.innerHTML = "Rating: " + rating;
 
                 const userImage = document.createElement("img");
-               const still = "still"
+                const still = "still"
+
                 userImage.setAttribute("src", results[i].images.fixed_height.url);
                 userImage.setAttribute("data-still", results[i].images.fixed_height.url)
                 userImage.setAttribute("data-animate", results[i].images.fixed_height.url)
                 userImage.setAttribute("data-state", still);
-               
+
                 userImage.classList.add("gif");
 
-                gifDiv.append(p);
-                gifDiv.append(userImage)
+                
+                gifDiv.append(p,userImage);
+                wrapper.append(gifDiv)
 
-                document.getElementById("gif-spot").prepend(gifDiv);
+                document.getElementById("gif").prepend(wrapper);
                 document.querySelectorAll(".gif").forEach(function (img) {
                     img.addEventListener("click", function (event) {
-              
-                    
-                      var state = event.target.getAttribute("data-state");
-                   
-                      if (state === "still") {
-                        event.target.setAttribute("src", event.target.getAttribute("data-animate"));
-                        event.target.setAttribute("data-state", "animate");
-                      } else {
-                        event.target.setAttribute("src", event.target.getAttribute("data-still"));
-                        event.target.setAttribute("data-state", "still");
-                      }
+
+
+                        var state = event.target.getAttribute("data-state");
+
+                        if (state === "still") {
+                            event.target.setAttribute("src", event.target.getAttribute("data-animate"));
+                            event.target.setAttribute("data-state", "animate");
+                        } else {
+                            event.target.setAttribute("src", event.target.getAttribute("data-still"));
+                            event.target.setAttribute("data-state", "still");
+                        }
                     });
-                  });
+                });
             }
         }
     });
@@ -100,32 +110,3 @@ document.getElementById("submit-button").addEventListener("click", function (eve
 
 renderButtons()
 
-
-
-//             const results = responseJson.data;
-//             for (let i = 0; i < results.length; i++) {
-//                 if (results[i].rating === "r" || results[i].rating === "pg") {
-//                     const gifDiv = document.createElement("div");
-
-//                     const rating = results[i].rating;
-
-//                     const p = document.createElement("p");
-//                     p.innerHTML = "Rating: " + rating;
-
-//                     const searchImage = document.createElement("img");
-
-//                     searchImage.setAttribute("src", results[i].images.fixed_height.url);
-
-//                     gifDiv.append(p);
-//                     gifDiv.append(searchImage);
-
-
-//                     document.getElementById("gif-spot").prepend(gifDiv);
-//                 }
-//             }
-//         });
-// });
-
-//   //first two search bars are working.
-//   //still needs the last two search bars. 
-//   //still needs the article to be prepended to the results div.

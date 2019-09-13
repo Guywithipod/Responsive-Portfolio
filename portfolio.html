@@ -6,6 +6,7 @@
   <title>Portfolio | Your Name</title>
   <link rel="stylesheet" type="text/css" href="PortfolioStyle.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assests/css/style.css">
 </head>
 
 <body>
@@ -33,17 +34,17 @@
       <div class="work">
         <img src="TV.jpg" alt="RPG Game">
 
-        <h3>RPG Game</h3>
-      </div>
-      <div class="work">
-        <img src="01-Class-Content_01-html-git-css_02-Homework_recommended-homework-solution_assets_images_technics-q-c-640-480-7.jpg" alt="Trivia Game">
-
-        <h3>Trivia Game</h3>
-      </div>
-      <div class="work">
-        <img src="01-Class-Content_01-html-git-css_02-Homework_recommended-homework-solution_assets_images_technics-q-c-640-480-2.jpg" alt="Rutgers Info Widget">
-
         <h3>Rutgers Info Widget</h3>
+      </div>
+      <div class="work">
+        <img src="assests/images/psychic.jpg" alt="Trivia Game" id ="psychic-game">
+
+        <h3>Psychic Game</h3>
+      </div>
+      <div class="work">
+        <img src="assests/images/sip.jpg" id ="sip">
+
+        <h3>sip app</h3>
       </div>
       <div class="work">
         <img src="01-Class-Content_01-html-git-css_02-Homework_recommended-homework-solution_assets_images_technics-q-c-640-480-5.jpg" alt="Rock Paper Scissors">
@@ -62,9 +63,14 @@
   </footer>
   <script >
 document.getElementById("home-work").addEventListener("click", function(){
-  open("ApiHomework/Api.html")
+  open("ApiHomework/Api.html")});
 
-})
+  document.getElementById("psychic-game").addEventListener("click", function(){
+  open("Psychic-Game/index.html")});
+
+  document.getElementById("sip").addEventListener("click", function(){
+  open("Project1/index.html")});
+
   </script>
 </body>
 
